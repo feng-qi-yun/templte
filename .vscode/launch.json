@@ -1,0 +1,13 @@
+{
+    "configurations": [
+        {
+            "name": "run",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceRoot}/${fileBasenameNoExtension}",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build C++(clang++)"
+        },
+    ]
+}

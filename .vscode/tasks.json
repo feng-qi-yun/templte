@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build C++(clang++)",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "-std=c++23",
+                "-fmodule-file=std=std.pcm",
+                "-stdlib=libc++",
+                // "-O2",
+                "-O0",
+                "-Wall",
+                "-g",
+                "-Wextra",
+                "${workspaceFolder}/${fileBasename}",
+                "-o",
+                "${workspaceFolder}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "problemMatcher": "$gcc"
+        },
+    ]
+}
